@@ -16,7 +16,7 @@ Consequently, the model optimizes detection of statistical rarity
 (Να βαλω τα credits του dataset επειδη το πηρα copy)
                                                                  
  
- PROBLEM DEFINITION
+## PROBLEM DEFINITION
 This project explores whether unsupervised anomaly detection can effectively prioritize suspicious AML transactions.
 ======================================================================================================================
 # PROJECT STEPS
