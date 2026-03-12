@@ -43,56 +43,26 @@ iii)Boxplot to understand the correlation of Log Amount with our class. The 50% 
 inside the box.
 iv) Conditional Probability between the amount and the **Is_laundering** class which has been cut to 10 equally sized groups.
 
+Train/Test Split
+Split the time based on a cut-off value and not randomly splitting because our need to have a time order.
+
 Feature Enginnering
 
 Divided up to three different classes(Basic Feature Engineering, Sender_behavioural_features
+- In Basic Feature Engineering:
+  We analyse the time and the Amount to create different features with more signal info for our DataFrame
+- Sender Behavioural Features:
+  i)Making analysis for each sender with **groupby** and the **aggregates** so we have an account behaviour analysis(eg The count aggregate answers how active is the sender). That analysis is suitable for situations such as Smurfing and for Fraud detection.
+- Time Feature Engineering:
+  i)This feature helps detect potential structuring behavior by analyzing transactions within short time windows rather than evaluating each transaction in isolation.
+  ii) train_df_small["Amount"].quantile(0.2), means that a threshold based on the 20th percentile of the transaction amount distribution was used to identify small transactions. This data-driven cutoff captures the lower tail of the distribution, where structuring behavior often occurs.
+ iii)We merged again the Df (combined_df) to include the new feature to both of them. To do the rolling(), it was required to do set_index(
+"timestamp") so the functions to be applied to **a moving time window**(10min).
 
-`import matplotlib.pyplot as plt`
+  
+  
 
-`import seaborn as sns`
-
-`import warnings`
-
-`warnings.filterwarnings('ignore')`
-
-
-## EXPLORATORY DATA ANALYSIS
-
-In this step we explore the dataset to have a better understanding. It provides useful insights of our dataset.
-
-Have a comprehended picture of our data
-
-`Data.head()`
-
-`data.shape()`
-
-Understand what kinds of data we have
-
-`data.dtype()`
-
-Addressing the Issue of Missing Values
-
-Checking for missing values .
-
-`print(data.isnull().sum())`
-
-column transformations 
-
-Because our Linear Model is valid only with numerical values we transform the categorical to numerical values 
-
-Find the numerical columns and visualize them
-
-`numer_col = [col for col in data.columns if data[col].dtype!='O']`
-
-`print(numer_col)`
-
-Observe the first 5 rows of the numerical columns
-
-`data[numer_col].head()`
-
-find the percentage of each categorical value 
-
-`frequency= data['area'].value_counts(normalize=True)`
+normalize=True)`
 
 `print(frequency)`
 
