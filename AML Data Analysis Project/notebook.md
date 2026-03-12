@@ -17,21 +17,35 @@ Consequently, the model optimizes detection of statistical rarity
                                                                  
  
 ## PROBLEM DEFINITION
-This project explores whether unsupervised anomaly detection can effectively prioritize suspicious AML transactions.
-======================================================================================================================
-# PROJECT STEPS
+This project does prioritization of suspicious AML transactions using anomaly scores.
+**======================================================================================================================
+# PIPELINE
+The pipeline follows these steps :
 
-## Import the necessary libraries
+Data Loading
+Exploratory Data Analysis
+Train/Test Split
+Feature Engineering
+Encoding
+Correlation
+Train/Evaluation
+==========================================================================================================================================
 
-**For numerical calculations**
+**Exploratory Data Analysis**
 
-`import numpy as np`
+It focuses on:
 
-to handle the dataset and use of a dataframe
+i) Visualise the probability distribution to understand our classes.
+ii) Check the feature **Amount**. The reason i decided it to do only on this
+because it has a strong signal of abnomal behaviour. Visualise the distribution,
+scaling it and observe the distribution.
+iii)Boxplot to understand the correlation of Log Amount with our class. The 50% of the values are
+inside the box.
+iv) Conditional Probability between the amount and the **Is_laundering** class which has been cut to 10 equally sized groups.
 
-`import pandas as pd`
+Feature Enginnering
 
-for plotting
+Divided up to three different classes(Basic Feature Engineering, Sender_behavioural_features
 
 `import matplotlib.pyplot as plt`
 
