@@ -85,66 +85,11 @@ iv) train_scores = -score
     test_scores = -score2, means the biggest number the more suspicious.
 v) train_scores = how much suspicious are the past (X_train) transactions.
 ### THRESHOLDING
-i)With np.quantile(train_Scores,0.99) we alert the 0.1% transactions as more suspicious.
-ii)Comparing **test_scores >= threshold** we make a policy
-
+i) With `np.quantile(train_Scores,0.99)` we alert the 0.1% transactions as more suspicious.
+ii) Comparing `test_scores >= threshold` we make a policy to label as **is_laundering** (main_y_predict) the one's with test_score bigger than the threshold
+iii) Generating the confusion matrix to start investigating the number of TN(True negatives), FP(false positives), FN(false negatives) , TP(true positives).
 
   
-
-normalize=True)`
-
-`print(frequency)`
-
-Update the categorical column with value transformations
-
-`data['area_encoded'] = data['area'].map(frequency)`
-
-`print(data[['area','area_encoded']])`
-
-Drop method for the area column
-
-`data_new= data.drop(["area"],axis=1)`
-
-Note: The moment we've done our values as numerical the ordinary column area is removed because of the categorical content 
-
-Plots to understand the relationship between the variables.Also in diagonal is a distribution of each variable
-
-`sns.pairplot(data_new)`
-
-`plt.show()`
-
-We can see that some variables have strong linear relationship between them. Its important to understand this as a first step to understand a potentially problem with our estimated values .
-
-
-## MULTICOLLINEARITY AND CORRELATION MATRIX
-
-The correlation matrix expresses the relationship of two predictors. This matrix involves a row and columns table in which each cell represents the correlation coefficient of the two variables. The correlation coefficient ranges from -1 to 1 with -1 indicating perfect negative relationship and 1 perfect positive relationship. The visualization of the correlation matrix is an important step before the building of the machine learning model because you can gain a better understanding about what’s most important for your model.
-
-**The Variance Inflation Factor** quantifies how much the variance of a specific regression coefficient for a feature is inflated due to multicollinearity with other features.
-
-So by running the `data_new.corr()` function we can observe that each cell shows a value between 0 and 1. We put a threshold to 0.8 value to find the problematic pairs which make the model less accurate.
-
-
-`problematic_pairs = correlation_matrix[(correlation_matrix.abs()> threshold) & (correlation_matrix.abs()<1)]`
-
-`print(problematic_pairs)`
-
-So the value such as the pair between active enteprises and births which is 0.99373 implies a very strong relationship between them that we have to act because it suggests that they contain similar (redundant) information.
-
-This observation is important to identify later problems that occurs to our coefficients of the model, thus making it less accurate.
-
 ## Evaluation of the model
 
-A factor which implies how accurate is our model is R_2. This is the coefficient of determination a measure of the goodness of fit of a model. A value of 1 indicates that the regression predictions perfectly fit the data. The formula of r is calculated as 
 
-                                                            
-                                  R2= SSTotal​SSExplained​​ = 1−SSTotal​SSResidual​​
-
-Formula definitions:
-
-SSExplained​/SSTotal​ is the proportion of the total variance in y that can be "explained" by X2,X3,…,XpX2​,X3​,…,Xp​ (predictors)
-R2R2 ranges from 0 to 1:
-
-    If R2=0R2=0: None of the variance in X1X1​ is explained by X2,X3,…,XpX2​,X3​,…,Xp​; all the variance is left in SSResidualSSResidual​.
-    If R2=1R2=1: All of the variance in X1X1​ is explained by X2,X3,…,XpX2​,X3​,…,Xp​, meaning SSResidual=0SSResidual​=0, and X1X1​ can be perfectly predicted from the other predictors.
-    
