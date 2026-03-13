@@ -76,6 +76,18 @@ With **encoded_df = pd.DataFrame(encoded,columns = feature_names,index = df.ind*
                                 .sort_values(key=abs, ascending=False))** it only examines the correlation of **each feature** with only the **target_col**. This is not important in this project because Isolation Forest is not trained with the class values. But for an overall EDA understanding we apply it.
   
 
+## OUR MODEL - ISOLATION FOREST
+We start by:
+i) Making our X_train , X_test with a list of features which we define as an argument (to have the opportunity to use again this class function).
+ii)Training our model with X_train.
+iii)Using the Isolation Forest function score_samples on X_train, X_test to have the anomaly scores. 
+iv) train_scores = -score
+    test_scores = -score2, means the biggest number the more suspicious.
+v) train_scores = how much suspicious are the past (X_train) transactions.
+### THRESHOLDING
+i)With np.quantile(train_Scores,0.99) we alert the 0.1% transactions as more suspicious.
+ii)Comparing **test_scores >= threshold** we make a policy
+
 
   
 
