@@ -76,12 +76,12 @@ With **encoded_df = pd.DataFrame(encoded,columns = feature_names,index = df.ind*
   
 
 ## OUR MODEL - ISOLATION FOREST
-We start by:
-i) Making our X_train , X_test with a list of features which we define as an argument (to have the opportunity to use again this class function).
-ii)Training our model with X_train.
+We start by: <br />
+i) Making our X_train , X_test with a list of features which we define as an argument (to have the opportunity to use again this class function). <br />
+ii)Training our model with X_train. <br />
 iii)Using the Isolation Forest function score_samples on X_train, X_test to have the anomaly scores. 
-iv) train_scores = -score
-    test_scores = -score2, means the biggest number the more suspicious.
+iv) train_scores = -score <br />
+    test_scores = -score2, means the biggest number the more suspicious. <br />
 v) train_scores = how much suspicious are the past (X_train) transactions.
 ### THRESHOLDING
 i) With `np.quantile(train_Scores,0.99)` we alert the 0.1% transactions as more suspicious.
