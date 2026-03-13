@@ -22,13 +22,13 @@ This project does prioritization of suspicious AML transactions using anomaly sc
 # PIPELINE
 The pipeline follows these steps :
 
-Data Loading
-Exploratory Data Analysis
-Train/Test Split
-Feature Engineering
-Encoding
-Correlation
-Train/Evaluation
+Data Loading <br />
+Exploratory Data Analysis <br />
+Train/Test Split <br />
+Feature Engineering <br />
+Encoding <br />
+Correlation <br />
+Train/Evaluation <br />
 
 **Exploratory Data Analysis**
 
