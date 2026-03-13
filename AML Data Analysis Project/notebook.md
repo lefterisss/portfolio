@@ -59,7 +59,24 @@ Divided up to three different classes(Basic Feature Engineering, Sender_behaviou
  iii)We merged again the Df (combined_df) to include the new feature to both of them. To do the rolling(), it was required to do set_index(
 "timestamp") so the functions to be applied to **a moving time window**(10min).
 
+### Encoding
+Because of our categorical features : **Payment_currency**, **Received_currency**, **Sender_bank_location**, **Receiver_bank_location**, **Payment_type**,
+to include it them in our model we do fit() to learn the categorical values and enc.transform(df[self.cat_cols]) ,to transform them into a numeric form. 
+With **encoded_df = pd.DataFrame(encoded,columns = feature_names,index = df.ind**ex), we included the numerical columns on a DataFrame and after we put it side by side with our df to have the new suitable columns.
+
+### Correlation
+  Explore how much the feature correlate to each other.
+  The code inside the **Correlation** class does the following:
+  i)We pick the main numeric columns we wanted to focus.
+  Thats why we didnt use the df.select_dtypes(include = "number") because it would include features such as then **encoding one** which have **dummy values**.
+  ii) Calculation of the correlation matrix via corr() to corr_df[existing_cols]
+  iii)Heatmap to visualize the corr results.
+  iv)Relation of the numerical features with the class **"Is_laundering"**. 
+  The **(num_df.corr()[target_col].drop(target_col)
+                                .sort_values(key=abs, ascending=False))** it only examines the correlation of **each feature** with only the **target_col**. This is not important in this project because Isolation Forest is not trained with the class values. But for an overall EDA understanding we apply it.
   
+
+
   
 
 normalize=True)`
