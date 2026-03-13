@@ -10,7 +10,7 @@ Consequently, the model optimizes detection of statistical rarity
 
 ## DATASET DESCRIPTION
 
- We should get more familiar with our Dataset. The dataset is about Financial Transactions.It consists data on Amount being transferred,as well as Payment Type,Sender/Receiver bank Account,Location.
+ We should get more familiar with our Dataset. The dataset is about Financial Transactions. It consists data on Amount being transferred,as well as Payment Type,Sender/Receiver bank Account,Location.
 
 **Note:**The dataset can be found at the following url.
 (Να βαλω τα credits του dataset επειδη το πηρα copy)
@@ -88,7 +88,6 @@ v) train_scores = how much suspicious are the past (X_train) transactions.
 i) With `np.quantile(train_Scores,0.99)` we alert the 0.1% transactions as more suspicious.
 ii) Comparing `test_scores >= threshold` we make a policy to label as **is_laundering** (main_y_predict) the one's with test_score bigger than the threshold
 iii) Generating the confusion matrix to start investigating the number of TN(True negatives), FP(false positives), FN(false negatives) , TP(true positives).
-
   
 ## Evaluation of the model
 
