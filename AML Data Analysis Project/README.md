@@ -78,14 +78,14 @@ With **encoded_df = pd.DataFrame(encoded,columns = feature_names,index = df.ind*
 ## OUR MODEL - ISOLATION FOREST
 We start by: <br />
 i) Making our X_train , X_test with a list of features which we define as an argument (to have the opportunity to use again this class function). <br />
-ii)Training our model with X_train. <br />
-iii)Using the Isolation Forest function score_samples on X_train, X_test to have the anomaly scores. 
+ii) Training our model with X_train. <br />
+iii) Using the Isolation Forest function score_samples on X_train, X_test to have the anomaly scores. 
 iv) train_scores = -score <br />
     test_scores = -score2, means the biggest number the more suspicious. <br />
-v) train_scores = how much suspicious are the past (X_train) transactions.
-### THRESHOLDING
-i) With `np.quantile(train_Scores,0.99)` we alert the 0.1% transactions as more suspicious.
-ii) Comparing `test_scores >= threshold` we make a policy to label as **is_laundering** (main_y_predict) the one's with test_score bigger than the threshold
+v) Train_scores = how much suspicious are the past (X_train) transactions.
+### THRESHOLDING <br />
+i) With `np.quantile(train_Scores,0.99)` we alert the 0.1% transactions as more suspicious. <br />
+ii) Comparing `test_scores >= threshold` we make a policy to label as **is_laundering** (main_y_predict) the one's with test_score bigger than the threshold <br />
 iii) Generating the confusion matrix to start investigating the number of TN(True negatives), FP(false positives), FN(false negatives) , TP(true positives).
   
 ## Evaluation of the model
