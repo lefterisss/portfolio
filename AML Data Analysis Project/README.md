@@ -89,7 +89,7 @@ ii) Comparing `test_scores >= threshold` we make a policy to label as **is_laund
 iii) Generating the confusion matrix to start investigating the number of TN(True negatives), FP(false positives), FN(false negatives) , TP(true positives).
   
 ## Evaluation of the model
-Firstly, we examine with our main threshold = 0.99 the Precision, Recall and the False Positive Rate (**FPR**).
+**Firstly**, we examine with our main threshold = 0.99, the **Precision**, **Recall** and the **False Positive Rate** (**FPR**).
 The equivalent mathematical formulas for these metrics are:
                                       
                                     
@@ -102,3 +102,19 @@ $$
 $$
 Recall = \frac{TP}{TP + FN}
 $$
+
+with Precision meaning from all the predictions that are "Is_laundering" positive , how many of them are truly with positive value and</br> with Precision meaning from all the positive cases ,how many the model can detect.
+
+False Positive Rate (FPR) measures the proportion of legitimate transactions that are incorrectly flagged as suspicious by the model. The mathematical formula is: 
+
+$$
+FPR = \frac{FP}{FP + TN}
+$$
+
+**Secondly**, </br>because of our goal to detect the anomalies and rank them, a related metric is **AUC** which is the possibility the test score of **"Is_laundering"** to be higher than the test score of the **normal** transactions.
+That metric shows a transaction discrimination between these two values.
+
+Thirdly,
+
+
+
