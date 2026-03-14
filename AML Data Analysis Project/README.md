@@ -91,15 +91,13 @@ iii) Generating the confusion matrix to start investigating the number of TN(Tru
 ## Evaluation of the model
 Firstly, we examine with our main threshold = 0.99 the Precision, Recall and the False Positive Rate (**FPR**).
 The equivalent mathematical formulas for these metrics are:
-
                                       
-                                     ### Precision
+                                    
 
 $$
 Precision = \frac{TP}{TP + FP}
 $$
 
-### Recall
 
 $$
 Recall = \frac{TP}{TP + FN}
