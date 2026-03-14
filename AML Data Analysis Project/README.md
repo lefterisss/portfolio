@@ -10,7 +10,7 @@ Consequently, the model optimizes detection of statistical rarity
 
 ## DATASET DESCRIPTION
 
- We should get more familiar with our Dataset. The dataset is about **Financial Transactions**. It consists data on **Amount** being transferred,as well as Payment Type,Sender/Receiver bank Account,Location.
+ We should get more familiar with our Dataset. The dataset is about **Financial Transactions**. It consists data on **Amount** being transferred,as well as **Payment Type**, **Sender**/**Receiver bank Account**,**Location**.
 
 ### Acknowledgment
 
