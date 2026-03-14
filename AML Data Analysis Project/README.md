@@ -89,5 +89,9 @@ ii) Comparing `test_scores >= threshold` we make a policy to label as **is_laund
 iii) Generating the confusion matrix to start investigating the number of TN(True negatives), FP(false positives), FN(false negatives) , TP(true positives).
   
 ## Evaluation of the model
+Firstly, we examine with our main threshold = 0.99 the Precision, Recall and the False Positive Rate (**FPR**).
+The equivalent mathematical formulas for these metrics are:
+
+                                      Precision = \frac{TP}{TP + FP}$.
 
 
