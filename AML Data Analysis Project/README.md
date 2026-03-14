@@ -12,8 +12,9 @@ Consequently, the model optimizes detection of statistical rarity
 
  We should get more familiar with our Dataset. The dataset is about **Financial Transactions**. It consists data on **Amount** being transferred,as well as Payment Type,Sender/Receiver bank Account,Location.
 
-**Note:**The dataset can be found at the following url.
-(Να βαλω τα credits του dataset επειδη το πηρα copy)
+### Acknowledgment
+
+This notebook was initially copied from a Kaggle notebook by **Pratyusha Mukherjee** and further modified and extended for this project.
                                                                  
  
 ## PROBLEM DEFINITION
