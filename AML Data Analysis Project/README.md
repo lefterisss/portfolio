@@ -83,7 +83,7 @@ iii) Using the Isolation Forest function score_samples on X_train, X_test to hav
 iv) train_scores = -score <br />
     test_scores = -score2, means the biggest number the more suspicious. <br />
 v) Train_scores = how much suspicious are the past (X_train) transactions.
-## THRESHOLDING <br />
+### THRESHOLDING <br />
 i) With `np.quantile(train_Scores,0.99)` we alert the 0.1% transactions as more suspicious. <br />
 ii) Comparing `test_scores >= threshold` we make a policy to label as **is_laundering** (main_y_predict) the one's with test_score bigger than the threshold <br />
 iii) Generating the confusion matrix to start investigating the number of TN(True negatives), FP(false positives), FN(false negatives) , TP(true positives).
