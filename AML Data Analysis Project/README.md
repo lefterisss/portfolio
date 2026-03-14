@@ -58,7 +58,7 @@ Divided up to three different classes(Basic Feature Engineering, Sender_behaviou
  iii)We merged again the Df (combined_df) to include the new feature to both of them. To do the rolling(), it was required to do set_index(
 "timestamp") so the functions to be applied to **a moving time window**(10min).
 
-### Encoding
+## Encoding
 Because of our categorical features : **Payment_currency**, **Received_currency**, **Sender_bank_location**, **Receiver_bank_location**, **Payment_type**,
 to include it them in our model we do fit() to learn the categorical values and enc.transform(df[self.cat_cols]) ,to transform them into a numeric form. 
 With **encoded_df = pd.DataFrame(encoded,columns = feature_names,index = df.ind**ex), we included the numerical columns on a DataFrame and after we put it side by side with our df to have the new suitable columns.
@@ -83,7 +83,7 @@ iii) Using the Isolation Forest function score_samples on X_train, X_test to hav
 iv) train_scores = -score <br />
     test_scores = -score2, means the biggest number the more suspicious. <br />
 v) Train_scores = how much suspicious are the past (X_train) transactions.
-### THRESHOLDING <br />
+## THRESHOLDING <br />
 i) With `np.quantile(train_Scores,0.99)` we alert the 0.1% transactions as more suspicious. <br />
 ii) Comparing `test_scores >= threshold` we make a policy to label as **is_laundering** (main_y_predict) the one's with test_score bigger than the threshold <br />
 iii) Generating the confusion matrix to start investigating the number of TN(True negatives), FP(false positives), FN(false negatives) , TP(true positives).
