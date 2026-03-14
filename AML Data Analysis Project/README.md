@@ -130,3 +130,11 @@ By analyzing the TPR at FPR = 0.01, we assess how many laundering transactions t
 
 ## Model Evaluation and Results
 
+### Model Comparison
+
+The **baseline model** outperformed the modified version, achieving a higher AUC (0.718 vs 0.697) and consistently producing equal or higher recall with fewer false positives across all tested thresholds. This indicates that the baseline provided a better operational trade-off between fraud detection and false alert volume.
+
+The **modified model** replaced the raw transaction **Amount** with a **sender-based z-score**, but this transformation **did not** improve performance. A likely explanation is that the raw transaction amount already contained strong anomaly information, while sender-level statistics (mean and standard deviation) may be unstable or noisy for accounts with limited history.
+
+Overall, the results suggest that absolute transaction magnitude was a more informative signal for anomaly detection than sender-relative deviation in this dataset.
+
