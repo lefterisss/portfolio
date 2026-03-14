@@ -63,7 +63,7 @@ Because of our categorical features : **Payment_currency**, **Received_currency*
 to include it them in our model we do fit() to learn the categorical values and enc.transform(df[self.cat_cols]) ,to transform them into a numeric form. 
 With **encoded_df = pd.DataFrame(encoded,columns = feature_names,index = df.ind**ex), we included the numerical columns on a DataFrame and after we put it side by side with our df to have the new suitable columns.
 
-### Correlation
+## Correlation
   Explore how much the feature correlate to each other.
   The code inside the **Correlation** class does the following:
   i)We pick the main numeric columns we wanted to focus.
