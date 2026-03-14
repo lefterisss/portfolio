@@ -10,7 +10,7 @@ Consequently, the model optimizes detection of statistical rarity
 
 ## DATASET DESCRIPTION
 
- We should get more familiar with our Dataset. The dataset is about Financial Transactions. It consists data on Amount being transferred,as well as Payment Type,Sender/Receiver bank Account,Location.
+ We should get more familiar with our Dataset. The dataset is about **Financial Transactions**. It consists data on **Amount** being transferred,as well as Payment Type,Sender/Receiver bank Account,Location.
 
 **Note:**The dataset can be found at the following url.
 (Να βαλω τα credits του dataset επειδη το πηρα copy)
@@ -30,7 +30,7 @@ Encoding <br />
 Correlation <br />
 Train/Evaluation <br />
 
-**Exploratory Data Analysis**
+## Exploratory Data Analysis
 
 It focuses on:
 
@@ -114,7 +114,19 @@ $$
 **Secondly**, </br>because of our goal to detect the anomalies and rank them, a related metric is **AUC** which is the possibility the test score of **"Is_laundering"** to be higher than the test score of the **normal** transactions.
 That metric shows a transaction discrimination between these two values.
 
-Thirdly,
+**Thirdly**, </br>the ROC_Curve is a metric that measures how well the anomaly scores rank suspicious transactions above legitimate.
+It is threshold-dependent and for each threshold t there is a (FPR(t),TPR(t)).
+Also, the ROC curve illustrates the trade-off between the **True Positive Rate** (TPR) and the **False Positive Rate** (FPR) across different decision thresholds. This helps understand how detection performance changes as the model becomes more or less conservative in flagging transactions. 
 
+**Note**: The main quantile = 0.99 ,means we generated a threshold for that particularly point (FPT(t),TPR(t)).
 
+**Fourthly**, We examine the ROC curve at a **target** False Positive Rate (FPR) of **1%** and determine the corresponding True Positive Rate (TPR) at that point.
+
+The goal of selecting such a **low FPR **is to limit the number of legitimate transactions incorrectly flagged as suspicious, thereby **reducing** unnecessary **investigations**.
+
+This is particularly important in highly **imbalanced** AML datasets, where legitimate transactions vastly **outnumber** laundering cases. Even a **small FPR** can generate a large number of false alerts, which can overwhelm investigators.
+
+By analyzing the TPR at FPR ≈ 0.01, we assess how many laundering transactions the model can detect while keeping the false alert rate operationally manageable.
+
+## Model Evaluation and Results
 
