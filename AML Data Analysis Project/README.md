@@ -1,4 +1,4 @@
-# AML-Fraud Detection-Analysis 
+# AML Detection-Analysis 
 
 ## **Βriefly Introduction**: 
 This dataset is highly **imbalanced**, with legitimate trasnactions vastly outnumbering fraudulent ones. 
