@@ -93,5 +93,14 @@ Firstly, we examine with our main threshold = 0.99 the Precision, Recall and the
 The equivalent mathematical formulas for these metrics are:
 
                                       
-                                      $$Precision = \frac{TP}{TP + FP}$$
+                                     ### Precision
 
+$$
+Precision = \frac{TP}{TP + FP}
+$$
+
+### Recall
+
+$$
+Recall = \frac{TP}{TP + FN}
+$$
