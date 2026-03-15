@@ -66,12 +66,12 @@ With `encoded_df = pd.DataFrame(encoded,columns = feature_names,index = df.index
 
 ## Correlation
   Explore how much the feature correlate to each other.
-  The code inside the **Correlation** class does the following:
+  The code inside the **Correlation** class does the following:</br>
   i)We pick the main numeric columns we wanted to focus.
-  Thats why we didnt use the df.select_dtypes(include = "number") because it would include features such as then **encoding one** which have **dummy values**.
-  ii) Calculation of the correlation matrix via corr() to corr_df[existing_cols]
-  iii)Heatmap to visualize the corr results.
-  iv)Relation of the numerical features with the class **"Is_laundering"**. 
+  Thats why we didnt use the `df.select_dtypes(include = "number")` because it would include features such as then **encoding one** which have **dummy values**.</br>
+  ii) Calculation of the correlation matrix via `corr()` to `corr_df[existing_cols]`</br>
+  iii)**Heatmap** to visualize the corr results.</br>
+  iv)Relation of the numerical features with the class **"Is_laundering"**. </br>
   The **(num_df.corr()[target_col].drop(target_col)
                                 .sort_values(key=abs, ascending=False))** it only examines the correlation of **each feature** with only the **target_col**. This is not important in this project because Isolation Forest is not trained with the class values. But for an overall EDA understanding we apply it.
   
