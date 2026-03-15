@@ -51,7 +51,7 @@ Split the time based on a cut-off value and not randomly splitting because our n
 Divided up to three different classes(Basic Feature Engineering, Sender_behavioural_features
 - In Basic Feature Engineering:
   We analyse the time and the Amount to create different features with more signal info for our DataFrame
-- Sender Behavioural Features:
+- Sender Behavioural Features:</br>
   i)Making analysis for each sender with **groupby** and the **aggregates** so we have an account behaviour analysis(eg The count aggregate answers how active is the sender). That analysis is suitable for situations such as Smurfing and for Fraud detection.
 - Time Feature Engineering:</br>
   i)This feature helps detect potential structuring behavior by analyzing transactions within short time windows rather than evaluating each transaction in isolation.</br>
