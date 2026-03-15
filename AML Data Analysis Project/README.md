@@ -127,7 +127,7 @@ The goal of selecting such a **low FPR **is to limit the number of legitimate tr
 
 This is particularly important in highly **imbalanced** AML datasets, where legitimate transactions vastly **outnumber** laundering cases. Even a **small FPR** can generate a large number of false alerts, which can overwhelm investigators.
 
-By analyzing the TPR at FPR = 0.01, we assess how many laundering transactions the model can detect while keeping the false alert rate operationally manageable.
+By analyzing the **TPR** at `FPR = 0.01`, we assess how many laundering transactions the model can detect while keeping the false alert rate operationally manageable.
 
 ## Model Evaluation and Results
 
