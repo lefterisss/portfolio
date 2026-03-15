@@ -53,7 +53,7 @@ Divided up to three different classes(Basic Feature Engineering, Sender_behaviou
   We analyse the time and the Amount to create different features with more signal info for our DataFrame
 - Sender Behavioural Features:
   i)Making analysis for each sender with **groupby** and the **aggregates** so we have an account behaviour analysis(eg The count aggregate answers how active is the sender). That analysis is suitable for situations such as Smurfing and for Fraud detection.
-- Time Feature Engineering:
+- Time Feature Engineering:</br>
   i)This feature helps detect potential structuring behavior by analyzing transactions within short time windows rather than evaluating each transaction in isolation.</br>
   ii) `train_df_small["Amount"].quantile(0.2)`, means that a threshold based on the 20th percentile of the transaction amount distribution was used to identify small transactions. This data-driven **cutoff** captures the lower tail of the distribution, where structuring behavior often occurs.
  iii)We merged again the Df (`combined_df`) to include the new feature to both of them. To do the `rolling()`, it was required to do `set_index(
