@@ -2,8 +2,8 @@
 
 ## **Βriefly Introduction**: 
 This dataset is highly **imbalanced**, with legitimate trasnactions vastly outnumbering fraudulent ones. 
-Such imbalance poses significant challenges for model evaluation, as the extremely small proportion of laundering cases can lead to low values for metrics such as precision and recall.
-To address this issue, this project explores the use of unsupervised anomaly detection, specifically using the Isolation Forest model. Unlike supervised classifiers, anomaly detection methods do not rely on labeled fraud examples during training. Instead, they learn the general structure of normal transaction behaviour and identify observations that deviate significantly from this pattern.
+Such imbalance poses significant challenges for model evaluation, as the extremely small proportion of laundering cases can lead to low values for metrics such as **precision** and **recall**.
+To address this issue, this project explores the use of **unsupervised anomaly detection**, specifically using the Isolation Forest model. Unlike supervised classifiers, anomaly detection methods do not rely on labeled fraud examples during training. Instead, they learn the general structure of normal transaction behaviour and identify observations that deviate significantly from this pattern.
 ## Isolation Forest:
 The model is an unsupervised learning detector which assigns an anomaly score to each transaction. Isolation Forest produces anomaly scores rather than calibrated fraud probabilities. 
 Consequently, the model optimizes detection of statistical rarity
