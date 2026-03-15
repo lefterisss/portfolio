@@ -72,8 +72,8 @@ With `encoded_df = pd.DataFrame(encoded,columns = feature_names,index = df.index
   ii) Calculation of the correlation matrix via `corr()` to `corr_df[existing_cols]`</br>
   iii)**Heatmap** to visualize the corr results.</br>
   iv)Relation of the numerical features with the class **"Is_laundering"**. </br>
-  The **(num_df.corr()[target_col].drop(target_col)
-                                .sort_values(key=abs, ascending=False))** it only examines the correlation of **each feature** with only the **target_col**. This is not important in this project because Isolation Forest is not trained with the class values. But for an overall EDA understanding we apply it.
+  The `(num_df.corr()[target_col].drop(target_col)
+                                .sort_values(key=abs, ascending=False))` it only examines the correlation of **each feature** with only the **target_col**. This is not important in this project because Isolation Forest is not trained with the class values. But for an overall EDA understanding we apply it.
   
 
 ## OUR MODEL - ISOLATION FOREST
