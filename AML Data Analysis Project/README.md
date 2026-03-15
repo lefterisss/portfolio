@@ -19,7 +19,7 @@ This notebook was initially copied from a Kaggle notebook by **Pratyusha Mukherj
  
 ## PROBLEM DEFINITION
 This project does prioritization of suspicious AML transactions using anomaly scores.
-**======================================================================================================================
+======================================================================================================================
 # PIPELINE
 The pipeline follows these steps :
 
@@ -54,15 +54,15 @@ Divided up to three different classes(Basic Feature Engineering, Sender_behaviou
 - Sender Behavioural Features:
   i)Making analysis for each sender with **groupby** and the **aggregates** so we have an account behaviour analysis(eg The count aggregate answers how active is the sender). That analysis is suitable for situations such as Smurfing and for Fraud detection.
 - Time Feature Engineering:
-  i)This feature helps detect potential structuring behavior by analyzing transactions within short time windows rather than evaluating each transaction in isolation.
-  ii) train_df_small["Amount"].quantile(0.2), means that a threshold based on the 20th percentile of the transaction amount distribution was used to identify small transactions. This data-driven cutoff captures the lower tail of the distribution, where structuring behavior often occurs.
- iii)We merged again the Df (combined_df) to include the new feature to both of them. To do the rolling(), it was required to do set_index(
-"timestamp") so the functions to be applied to **a moving time window**(10min).
+  i)This feature helps detect potential structuring behavior by analyzing transactions within short time windows rather than evaluating each transaction in isolation.</br>
+  ii) `train_df_small["Amount"].quantile(0.2)`, means that a threshold based on the 20th percentile of the transaction amount distribution was used to identify small transactions. This data-driven **cutoff** captures the lower tail of the distribution, where structuring behavior often occurs.
+ iii)We merged again the Df (`combined_df`) to include the new feature to both of them. To do the `rolling()`, it was required to do `set_index(
+"timestamp")` so the functions to be applied to **a moving time window**(10min).
 
 ## Encoding
 Because of our categorical features : **Payment_currency**, **Received_currency**, **Sender_bank_location**, **Receiver_bank_location**, **Payment_type**,
-to include it them in our model we do fit() to learn the categorical values and enc.transform(df[self.cat_cols]) ,to transform them into a numeric form. 
-With **encoded_df = pd.DataFrame(encoded,columns = feature_names,index = df.ind**ex), we included the numerical columns on a DataFrame and after we put it side by side with our df to have the new suitable columns.
+to include it them in our model we do `fit()` to learn the categorical values and `enc.transform(df[self.cat_cols])` ,to transform them into a numeric form. 
+With `encoded_df = pd.DataFrame(encoded,columns = feature_names,index = df.index)`, we included the numerical columns on a DataFrame and after we put it side by side with our df to have the new suitable columns.
 
 ## Correlation
   Explore how much the feature correlate to each other.
