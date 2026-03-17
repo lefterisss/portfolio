@@ -166,10 +166,10 @@ This observation is important to identify later problems that occurs to our coef
 
 ### Why Multicollinearity is a Problem
 
-High multicollinearity leads to:
-Unstable coefficient estimates
-Large standard errors
-Difficulty in interpreting the effect of individual predictors
+High multicollinearity leads to:</br>
+Unstable coefficient estimates</br>
+Large standard errors</br>
+Difficulty in interpreting the effect of individual predictors</br>
 In this dataset:
 
 active_enterprises, births, and deaths are highly correlated
