@@ -195,17 +195,15 @@ R2R2 ranges from 0 to 1:
  ## Model Diagnostics
 
 After fitting the model, diagnostic checks were performed:
-1. Residual Analysis</br>
+**1. Residual Analysis**</br>
 Standardized residuals were used to detect outliers</br>
 Observations with |residual| > 2 were considered problematic
 
-2. Leverage
-
+**2. Leverage**
 Measures how far an observation is from the mean of predictors
-
 High leverage points can disproportionately affect the model
 
-Threshold used:
+**Threshold used:**
 
 leverage threshold=2pn
 leverage threshold=
@@ -213,8 +211,6 @@ n
 2p
 	​
 
-3. Cook’s Distance
-
-Combines leverage and residual information
-
+3. **Cook’s Distance
+**Combines leverage and residual information
 Identifies influential observations
