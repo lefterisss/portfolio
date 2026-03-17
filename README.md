@@ -137,6 +137,15 @@ Plots to understand the relationship between the variables.Also in diagonal is a
 
 We can see that some variables have strong linear relationship between them. Its important to understand this as a first step to understand a potentially problem with our estimated values .
 
+## FEATURE SCALING & MODEL ASSUMPTIONS 
+
+Although linear regression does not strictly require feature scaling, large differences in magnitude between variables (e.g. year vs active_enterprises) can affect numerical stability and interpretation of coefficients.
+
+In this project, scaling was not applied explicitly, but this choice is justified because:
+
+The model is interpreted mainly through coefficients and statistical tests
+
+The main goal is understanding relationships rather than optimizing predictive performance
 
 ## MULTICOLLINEARITY AND CORRELATION MATRIX
 
@@ -154,6 +163,19 @@ So by running the `data_new.corr()` function we can observe that each cell shows
 So the value such as the pair between active enteprises and births which is 0.99373 implies a very strong relationship between them that we have to act because it suggests that they contain similar (redundant) information.
 
 This observation is important to identify later problems that occurs to our coefficients of the model, thus making it less accurate.
+
+### Why Multicollinearity is a Problem
+
+High multicollinearity leads to:
+Unstable coefficient estimates
+Large standard errors
+Difficulty in interpreting the effect of individual predictors
+In this dataset:
+
+active_enterprises, births, and deaths are highly correlated
+→ they represent similar underlying economic activity
+
+Thus, removing births improves model stability.
 
 ## Evaluation of the model
 
