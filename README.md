@@ -194,13 +194,13 @@ R2R2 ranges from 0 to 1:
 
  ## Model Diagnostics
 
-After fitting the model, diagnostic checks were performed:
+After fitting the model, diagnostic checks were performed:</br>
 **1. Residual Analysis**</br>
 Standardized residuals were used to detect outliers</br>
 Observations with |residual| > 2 were considered problematic
 
 **2. Leverage**
-Measures how far an observation is from the mean of predictors
+Measures how far an observation is from the mean of predictors</br>
 High leverage points can disproportionately affect the model
 
 **Threshold used:**
