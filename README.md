@@ -199,7 +199,7 @@ After fitting the model, diagnostic checks were performed:</br>
 Standardized residuals were used to detect outliers</br>
 Observations with |residual| > 2 were considered problematic
 
-**2. Leverage**
+**2. Leverage**</br>
 Measures how far an observation is from the mean of predictors</br>
 High leverage points can disproportionately affect the model
 
