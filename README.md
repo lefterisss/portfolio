@@ -213,6 +213,21 @@ leverage threshold=n2p
 - Combines leverage and residual information.
 - Identifies influential observations.
 
+## Outlier Removal Strategy
+
+**Outliers were identified using standardized residuals.Interpretation → ❌ (πρόσθεσε)
+❗ Outliers explanation → ❌ (πρόσθεσε)
+❗ Improvements + Takeaways → ❌ (πρόσθεσε)**</br>Steps followed:
+
+- Detect observations where |standardized residual| > 2
+- Remove those observations from the dataset
+- Refit the regression model
+
+After removing outliers:</br>
+- R² improved from 0.961 to 0.974.</br>
+- This indicates that extreme observations were affecting the model fit.
+
+However, removing outliers should be done carefully, as it may reduce the model’s ability to generalize to new data.
 ## Limitations of the Model
 - No constant term → affects interpretation of R².</br>
 - Strong multicollinearity initially present.</br>
