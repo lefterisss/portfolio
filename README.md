@@ -194,7 +194,7 @@ R2R2 ranges from 0 to 1:
 
  ## Model Diagnostics
 
-After fitting the model, diagnostic checks were performed:</br>
+After fitting the model, diagnostic checks were performed:
 1. Residual Analysis</br>
 Standardized residuals were used to detect outliers</br>
 Observations with |residual| > 2 were considered problematic
