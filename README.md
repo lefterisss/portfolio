@@ -191,4 +191,33 @@ R2R2 ranges from 0 to 1:
 
     If R2=0R2=0: None of the variance in X1X1​ is explained by X2,X3,…,XpX2​,X3​,…,Xp​; all the variance is left in SSResidualSSResidual​.
     If R2=1R2=1: All of the variance in X1X1​ is explained by X2,X3,…,XpX2​,X3​,…,Xp​, meaning SSResidual=0SSResidual​=0, and X1X1​ can be perfectly predicted from the other predictors.
-    
+
+ ## Model Diagnostics
+
+After fitting the model, diagnostic checks were performed:
+
+1. Residual Analysis
+
+Standardized residuals were used to detect outliers
+
+Observations with |residual| > 2 were considered problematic
+
+2. Leverage
+
+Measures how far an observation is from the mean of predictors
+
+High leverage points can disproportionately affect the model
+
+Threshold used:
+
+leverage threshold=2pn
+leverage threshold=
+n
+2p
+	​
+
+3. Cook’s Distance
+
+Combines leverage and residual information
+
+Identifies influential observations
