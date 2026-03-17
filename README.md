@@ -137,7 +137,7 @@ Plots to understand the relationship between the variables.Also in diagonal is a
 
 We can see that some variables have strong linear relationship between them. Its important to understand this as a first step to understand a potentially problem with our estimated values .
 
-## FEATURE SCALING & MODEL ASSUMPTIONS 
+## Feature Scaling and Model Assumptions 
 
 Although linear regression does not strictly require feature scaling, large differences in magnitude between variables (e.g. year vs active_enterprises) can affect numerical stability and interpretation of coefficients.
 
@@ -147,8 +147,7 @@ The model is interpreted mainly through coefficients and statistical tests
 
 The main goal is understanding relationships rather than optimizing predictive performance
 
-## MULTICOLLINEARITY AND CORRELATION MATRIX
-
+## Multicollinearity and Confusion Matrix
 The correlation matrix expresses the relationship of two predictors. This matrix involves a row and columns table in which each cell represents the correlation coefficient of the two variables. The correlation coefficient ranges from -1 to 1 with -1 indicating perfect negative relationship and 1 perfect positive relationship. The visualization of the correlation matrix is an important step before the building of the machine learning model because you can gain a better understanding about what’s most important for your model.
 
 **The Variance Inflation Factor** quantifies how much the variance of a specific regression coefficient for a feature is inflated due to multicollinearity with other features.
