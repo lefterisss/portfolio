@@ -211,3 +211,10 @@ leverage threshold=n2p
 
 3.**Cook’s Distance**</br>Combines leverage and residual information.
 Identifies influential observations.
+
+## Limitations of the Model
+No constant term → affects interpretation of R².</br>
+Strong multicollinearity initially present.</br>
+Autocorrelation in residuals (time dependency).</br>
+Linear assumption may not fully capture relationships.</br>
+Area encoding using frequency may not capture spatial relationships.</br>
