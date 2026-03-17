@@ -215,9 +215,8 @@ leverage threshold=n2p
 
 ## Outlier Removal Strategy
 
-**Outliers were identified using standardized residuals.Interpretation → ❌ (πρόσθεσε)
-❗ Outliers explanation → ❌ (πρόσθεσε)
-❗ Improvements + Takeaways → ❌ (πρόσθεσε)**</br>Steps followed:
+**Outliers were identified using standardized residuals.**
+Steps followed:
 
 - Detect observations where |standardized residual| > 2
 - Remove those observations from the dataset
