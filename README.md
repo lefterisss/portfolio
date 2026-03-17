@@ -206,11 +206,8 @@ High leverage points can disproportionately affect the model
 **Threshold used:**
 
 leverage threshold=2pn
-leverage threshold=
-n
-2p
+leverage threshold=n2p
 	​
 
-3. **Cook’s Distance
-**Combines leverage and residual information
+3. **Cook’s Distance**</br>Combines leverage and residual information
 Identifies influential observations
