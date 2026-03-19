@@ -35,12 +35,12 @@ Train/Evaluation <br />
 
 It focuses on:
 
-i) Visualise the probability distribution to understand our classes.
+i) Visualise the probability distribution to understand our classes.</br>
 ii) Check the feature **Amount**. The reason i decided it to do only on this
 because it has a strong signal of abnomal behaviour. Visualise the distribution,
-scaling it and observe the distribution.
+scaling it and observe the distribution.</br>
 iii)Boxplot to understand the correlation of Log Amount with our class. The 50% of the values are
-inside the box.
+inside the box.</br>
 iv) Conditional Probability between the amount and the **Is_laundering** class which has been cut to 10 equally sized groups.
 
 Train/Test Split
