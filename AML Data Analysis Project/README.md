@@ -43,7 +43,8 @@ iii)Boxplot to understand the correlation of Log Amount with our class. The 50% 
 inside the box.</br>
 iv) Conditional Probability between the amount and the **Is_laundering** class which has been cut to 10 equally sized groups.
 
-Train/Test Split
+## Train/Test Split
+
 Split the time based on a cut-off value and not randomly splitting because our need to have a time order.
 
 ## Feature Enginnering
