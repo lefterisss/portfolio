@@ -53,7 +53,7 @@ The dataset can be found at the following url.
  A machine learning model is built to predict the outcome of the target variable based on two or more predictors of our business demographics dataset.
 Our goal is to estimate the outcome of the birth_rates based on the dependent variables (the feature we explained earlier). The selection of the model is the OLS model from the library statsmodels.api which we will apply.We mention it cause there is also other model building class such as LinearRegression which serves different purposes but have lot similarities.
 
-===============================================================================================================
+==============================================================================================================
 # PROJECT STEPS
 
 ## Import the necessary libraries
