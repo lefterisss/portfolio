@@ -39,7 +39,8 @@ The system simulates how financial institutions analyze incoming transactions an
 - Feature engineering <br />
 - Model training <br />
 - Threshold optimization <br />
-- Artifact export <br />
+- Artifact export <br />  
+
 
 **API Layer** (FastAPI)
 
