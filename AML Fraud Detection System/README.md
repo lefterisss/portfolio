@@ -30,9 +30,8 @@ The system simulates how financial institutions analyze incoming transactions an
         
 - Stored in Database (SQLite)
 
-====================================================================================================================
 
-**System Components**
+## System Components
 
 **Training Pipeline** (Kaggle / local)
 
