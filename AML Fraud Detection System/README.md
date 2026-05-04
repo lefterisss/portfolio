@@ -115,3 +115,57 @@ Includes:
 - Statistical aggregates (rolling windows) </br>
 - Risk flags (high-risk combinations) </br>
 - Log-transformed amounts </br>
+
+    Time-based features (hour, day, weekend)
+
+    Behavioral features (sender history)
+
+    Statistical aggregates (rolling windows)
+
+    Risk flags (high-risk combinations)
+
+    Log-transformed amounts
+
+### Model Performance
+
+Metric               Value 
+
+**Precision**            0.34
+
+**Recall**               0.30
+
+#### Interpretation 
+
+- The model detects some fraud patterns </br>
+- It misses a portion of fraudulent transactions </br>
+- Performance is affected by class imbalance </br>
+
+
+## Class Imbalance impact
+
+Fraud is rare:
+                      P(fraud)≪P(normal)
+
+This leads to: 
+
+ - Conservative predictions
+ - Few high-risk regions in feature space
+ - Difficuly detecting rare patterns
+
+## API Inference Pipeline
+
+ ### Endpoint
+
+ **POST /predict-batch**
+
+ **Accepts**:
+[
+ {
+ "Sender_account": "...",
+    "Receiver_account": "...",
+    "Amount": ...,
+    "timestamp": "...",
+    ...
+}
+]
+ 
