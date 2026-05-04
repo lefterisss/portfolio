@@ -277,3 +277,13 @@ Improve synthetic fraud simulation
 │</br>
 ├── seed.py</br>
 ├── aml.db</br>
+
+## How to Run
+
+1. Start API
+
+**uvicorn api.main:app --reload**
+
+3. Send transactions
+
+**python seed.py**
