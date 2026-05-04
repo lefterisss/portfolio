@@ -162,10 +162,128 @@ This leads to:
 [
  {
  "Sender_account": "...",
-    "Receiver_account": "...",
-    "Amount": ...,
-    "timestamp": "...",
+ 
+ "Receiver_account": "...",
+    
+ "Amount": ...,
+ 
+ "timestamp": "...",
     ...
 }
 ]
- 
+
+### What Happens Internally
+
+For each transaction:
+
+1. Feature construction (build_features)
+
+2. Encoding (OneHotEncoder)
+
+3. Alignment with training features
+
+4. Model prediction:
+
+	​                For each transaction:
+
+1.Feature construction (build_features)
+
+2. Encoding (OneHotEncoder)
+
+3. Alignment with training features
+
+4. Model prediction:
+
+                        prob = P (fraud | x )
+
+
+
+5. Alert decision:
+
+**alert = int(prob >= threshold)**
+
+6. Store in database
+
+### Observed API Behavior
+
+During testing with **synthetic transactions**
+
+   prob ≈ o
+   alert = 0 (for all transactions)
+
+### Explanation
+
+This behavior is **expected.**
+
+**Why?**
+
+- The model assigns non-zero probabilities only when:
+  - High-risk feature combinations are present
+- Synthetic inputs:
+  - Do not activate these patterns
+
+Mathematically:
+
+                x_api ∉ fraud regions⇒ P(fraud∣x)≈0
+
+**Key Insight**
+
+Model predictions depend entirely on feature activation patterns.
+
+The API is working correctly — the model simply **does not detect fraud-like signals in the inputs.**
+
+## Precision vs Recall in Production
+
+The model was tuned for **precision**, meaning:
+
+- Fewer false positives
+- More conservative predictions
+- Lower recall (missed fraud cases)
+
+This explains why:
+
+Most API transactions -> low probability
+
+### Limitations
+
+Synthetic API data does not reflect real fraud behavior
+
+Class imbalance reduces recall
+
+Decision Tree produces sharp probability outputs
+
+### Future Improvements
+
+Use Random Forest / Gradient Boosting
+
+Apply class balancing techniques
+
+Improve synthetic fraud simulation
+
+## Project Structure
+
+aml-project/
+│
+├── api/
+
+│   ├── main.py
+
+│   ├── db.py
+
+│   ├── features.py
+│
+├── artifacts/
+
+│   ├── model.pkl
+
+│   ├── encoder.pkl
+
+│   ├── features.json
+
+│   ├── threshold.json
+
+│   ├── risky_flags.json
+│
+├── seed.py
+
+├── aml.db
