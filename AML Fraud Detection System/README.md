@@ -59,3 +59,59 @@ The system simulates how financial institutions analyze incoming transactions an
 - Stores transaction history
 
 - Enables behavioral features
+
+## Tech Stack
+
+### Core
+
+- Python </br>
+- Pandas/NumPy
+- Scikit-learn
+
+### API
+
+- FastAPI
+- Uvicorn
+- Pydantic
+
+### Stoage 
+
+- SQLite
+
+### ML Artifacts
+
+- joblib(model, encoder)
+- JSON (threshold, featuresm risk flags)
+
+## Training Phase
+
+### Objective
+
+Train a model to estimate:
+
+                        P(fraud∣transaction features)
+
+
+### Model
+
+- Decision Tree Classifier
+- GridSearchCV for hyperparameter tuning
+- Optimization focused on **precision**
+
+### Data Split Strategy
+
+- Time-based split:
+
+  - Train /Validation / Test
+
+- Prevents data  leakage
+
+### Feature Engineering
+
+Includes:
+
+- Time-based features (hour, day, weekend) </br>
+- Behavioral features (sender history) </br>
+- Statistical aggregates (rolling windows) </br>
+- Risk flags (high-risk combinations) </br>
+- Log-transformed amounts </br>
