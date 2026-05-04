@@ -74,7 +74,7 @@ The system simulates how financial institutions analyze incoming transactions an
 - Uvicorn
 - Pydantic
 
-### Stoage 
+### Storage 
 
 - SQLite
 
