@@ -262,28 +262,18 @@ Improve synthetic fraud simulation
 
 ## Project Structure
 
-aml-project/
-│
-├── api/
-
-│   ├── main.py
-
-│   ├── db.py
-
-│   ├── features.py
-│
-├── artifacts/
-
-│   ├── model.pkl
-
-│   ├── encoder.pkl
-
-│   ├── features.json
-
-│   ├── threshold.json
-
-│   ├── risky_flags.json
-│
-├── seed.py
-
-├── aml.db
+**aml-project**/</br>
+│</br>
+├── **api**/</br>
+│   ├── main.py</br>
+│   ├── db.py</br>  │   ├── features.py</br>
+│</br>
+├── **artifacts**/</br>
+│   ├── model.pkl</br>
+│   ├── encoder.pkl</br>
+│   ├── features.json</br>
+│   ├── threshold.json</br>
+│   ├── risky_flags.json</br>
+│</br>
+├── seed.py</br>
+├── aml.db</br>
