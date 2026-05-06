@@ -296,6 +296,10 @@ Improve synthetic fraud simulation
 
 **uvicorn api.main:app --reload**
 
-3. Send transactions
+Example: <p align="center">
+  <img src="images/uvicorn_example.png" width="800"/>
+</p>
+
+2. Send transactions
 
 **python seed.py**
