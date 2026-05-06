@@ -116,15 +116,27 @@ Includes:
 - Risk flags (high-risk combinations) </br>
 - Log-transformed amounts </br>
 
-    Time-based features (hour, day, weekend)
+#### Behavioral Modeling & Experiments
 
-    Behavioral features (sender history)
+The project focused heavily on behavioral AML feature engineering rather than relying only on isolated transaction attributes.
 
-    Statistical aggregates (rolling windows)
+Several experimental feature groups were evaluated independently through ablation studies, including:
 
-    Risk flags (high-risk combinations)
+- temporal rolling-window features
+- sender historical behavior
+- burst transaction activity
+- receiver diversity patterns
+- risk-combination flags
 
-    Log-transformed amounts
+The experiments showed that behavioral and temporal context consistently outperformed isolated static transaction features.
+
+#### Threshold Tuning & Validation
+
+The model was validated using a time-based train/validation/test split to avoid temporal leakage.
+
+Threshold optimization was performed on validation probabilities in order to maximize recall under precision constraints.
+
+Bootstrap confidence intervals and paired statistical comparisons were also used to evaluate model stability and compare feature groups.
 
 ### Model Performance
 
@@ -138,8 +150,7 @@ Metric               Value
 
 - The model detects some fraud patterns </br>
 - It misses a portion of fraudulent transactions </br>
-- Performance is affected by class imbalance </br>
-
+- Performance is affected by **class imbalance** </br>
 
 ## Class Imbalance impact
 
@@ -149,7 +160,7 @@ Fraud is rare:
 This leads to: 
 
  - Conservative predictions
- - Few high-risk regions in feature space
+ - **Few high-risk regions** in feature space
  - Difficuly detecting rare patterns
 
 ## API Inference Pipeline
