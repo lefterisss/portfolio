@@ -277,7 +277,7 @@ Improve synthetic fraud simulation
 │</br>
 ├── **api**/</br>
 │   ├── main.py</br>
-│   ├── db.py</br>  │   ├── features.py</br>
+│   ├── db.py</br>  │   ├── features.py</br>  │  ├── transferred_encoder.py</br>
 │</br>
 ├── **artifacts**/</br>
 │   ├── model.pkl</br>
@@ -288,6 +288,7 @@ Improve synthetic fraud simulation
 │</br>
 ├── seed.py</br>
 ├── aml.db</br>
+├── requirements.txt</br>
 
 ## How to Run
 
