@@ -296,8 +296,8 @@ Improve synthetic fraud simulation
 
 **uvicorn api.main:app --reload**
 
-Example: <p align="center">
-  <img src="images/uvicorn_example.png" width="800"/>
+Example: <p align="left">
+  <img src="images/uvicorn_example.png" width="500"/>
 </p>
 
 2. Send transactions
